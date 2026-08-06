@@ -1,0 +1,16 @@
+note-app.tar 
+note-app-modified.tar 
+notes.db 
+contract_address.json 
+contract_abi.json 
+__pycache__/ 
+*.pyc
+ArtifactIntegrity.sol
+deploy_contract.py
+verify_artifact.py
+test.py
+artifacts/*.tar
+audit_app.py
+audit_templates/
+evaluation/evaluation/results/*.json
+evaluation/evaluation/results/*.jsonl

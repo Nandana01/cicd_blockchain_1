@@ -1,0 +1,161 @@
+(base) D:\project_2026\MS\FAPE0510\Full_code\evaluation>python run_evaluation.py --source ../note-app.tar --artifact-id notes-app-v1
+======================================================================
+BLOCKCHAIN ARTIFACT INTEGRITY - EVALUATION SUITE
+======================================================================
+  Source artifact: ../note-app.tar
+  Artifact ID:     notes-app-v1
+  Tamper variants: 3 per method
+  Poll interval:   5.0s
+  Max polls:       30
+  Started at:      20260626_171539
+======================================================================
+
+======================================================================
+STEP 1: TAMPER SIMULATION
+======================================================================
+Source artifact: ../note-app.tar
+Original SHA-256: 0b6024adc7a84fd605b6990f06d0d306d229d4b12ca5ed6faa6d4ca3e7ed1735
+Creating 3 tampered variants per method...
+
+  [byte_flip_000] method=byte_flip  hash=a62091068ada99b3...  diff=True
+  [byte_flip_001] method=byte_flip  hash=d3c36d6466531345...  diff=True
+  [byte_flip_002] method=byte_flip  hash=f129709e7ddcf0a8...  diff=True
+  [overwrite_000] method=overwrite  hash=06f3f303c76fe861...  diff=True
+  [overwrite_001] method=overwrite  hash=73d7d17c011841e3...  diff=True
+  [overwrite_002] method=overwrite  hash=57e401390498fe26...  diff=True
+  [truncate_000] method=truncate  hash=a271f1b9e91ce91d...  diff=True
+  [truncate_001] method=truncate  hash=e472f7496408de76...  diff=True
+  [truncate_002] method=truncate  hash=537f5165263ba2a4...  diff=True
+  [append_000] method=append  hash=dc3682b51742595c...  diff=True
+  [append_001] method=append  hash=653759fb35fc36bf...  diff=True
+  [append_002] method=append  hash=a935478ecbcabad3...  diff=True
+  [replace_all_000] method=replace_all  hash=2615cf07bcdec3a6...  diff=True
+  [replace_all_001] method=replace_all  hash=4b85511f79815188...  diff=True
+  [replace_all_002] method=replace_all  hash=8da4df7d2f3fc60f...  diff=True
+
+Manifest written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\tampered_artifacts\tamper_manifest.json
+Total tampered artifacts: 15
+
+======================================================================
+STEP 2: DETECTION SUITE
+======================================================================
+Running detection on 15 tampered artifacts...
+
+  [1/15] tampered_byte_flip_000.tar (method=byte_flip) ... DETECTED (2/3 pathways)
+  [2/15] tampered_byte_flip_001.tar (method=byte_flip) ... DETECTED (2/3 pathways)
+  [3/15] tampered_byte_flip_002.tar (method=byte_flip) ... DETECTED (2/3 pathways)
+  [4/15] tampered_overwrite_000.tar (method=overwrite) ... DETECTED (2/3 pathways)
+  [5/15] tampered_overwrite_001.tar (method=overwrite) ... DETECTED (2/3 pathways)
+  [6/15] tampered_overwrite_002.tar (method=overwrite) ... DETECTED (2/3 pathways)
+  [7/15] tampered_truncate_000.tar (method=truncate) ... DETECTED (2/3 pathways)
+  [8/15] tampered_truncate_001.tar (method=truncate) ... DETECTED (2/3 pathways)
+  [9/15] tampered_truncate_002.tar (method=truncate) ... DETECTED (2/3 pathways)
+  [10/15] tampered_append_000.tar (method=append) ... DETECTED (2/3 pathways)
+  [11/15] tampered_append_001.tar (method=append) ... DETECTED (2/3 pathways)
+  [12/15] tampered_append_002.tar (method=append) ... DETECTED (2/3 pathways)
+  [13/15] tampered_replace_all_000.tar (method=replace_all) ... DETECTED (2/3 pathways)
+  [14/15] tampered_replace_all_001.tar (method=replace_all) ... DETECTED (2/3 pathways)
+  [15/15] tampered_replace_all_002.tar (method=replace_all) ... DETECTED (2/3 pathways)
+
+Detection results written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\detection_results_1782474435.json
+Detection rate: 100.0%
+
+======================================================================
+STEP 3: DETECTION RATE CALCULATION
+======================================================================
+======================================================================
+DETECTION RATE REPORT
+======================================================================
+
+Overall Detection Rate: 100.0%
+  Total artifacts tested: 15
+  Detected: 15
+  Missed:   0
+
+--- By Tamper Method ---
+  append              : 100.00%  (3/3)
+  byte_flip           : 100.00%  (3/3)
+  overwrite           : 100.00%  (3/3)
+  replace_all         : 100.00%  (3/3)
+  truncate            : 100.00%  (3/3)
+
+--- By Detection Pathway ---
+  audit_api_current_status      :   0.00%  (0/15)
+  verify_artifact_script        : 100.00%  (15/15)
+  web3_direct                   : 100.00%  (15/15)
+
+
+  Injecting tampered artifact for latency test: tampered_byte_flip_000.tar
+  Tamper introduced at: 1782474436.3794248
+
+======================================================================
+STEP 4: LATENCY MONITORING
+======================================================================
+Starting monitor: artifact=../note-app.tar
+  Polling interval: 5.0s
+  Max polls: 30
+  Tamper time (if known): 1782474436.3794248
+
+  Poll    1 | 2026-06-26 17:17:16 | TAMPERED
+  Poll    2 | 2026-06-26 17:17:22 | TAMPERED
+  Poll    3 | 2026-06-26 17:17:27 | TAMPERED
+  Poll    4 | 2026-06-26 17:17:33 | TAMPERED
+  Poll    5 | 2026-06-26 17:17:38 | TAMPERED
+  Poll    6 | 2026-06-26 17:17:43 | TAMPERED
+  Poll    7 | 2026-06-26 17:17:49 | TAMPERED
+  Poll    8 | 2026-06-26 17:17:54 | TAMPERED
+  Poll    9 | 2026-06-26 17:18:00 | TAMPERED
+  Poll   10 | 2026-06-26 17:18:05 | TAMPERED
+  Poll   11 | 2026-06-26 17:18:11 | TAMPERED
+  Poll   12 | 2026-06-26 17:18:16 | TAMPERED
+  Poll   13 | 2026-06-26 17:18:22 | TAMPERED
+  Poll   14 | 2026-06-26 17:18:27 | TAMPERED
+  Poll   15 | 2026-06-26 17:18:32 | TAMPERED
+  Poll   16 | 2026-06-26 17:18:38 | TAMPERED
+  Poll   17 | 2026-06-26 17:18:43 | TAMPERED
+  Poll   18 | 2026-06-26 17:18:49 | TAMPERED
+  Poll   19 | 2026-06-26 17:18:54 | TAMPERED
+  Poll   20 | 2026-06-26 17:18:59 | TAMPERED
+  Poll   21 | 2026-06-26 17:19:05 | TAMPERED
+  Poll   22 | 2026-06-26 17:19:10 | TAMPERED
+  Poll   23 | 2026-06-26 17:19:16 | TAMPERED
+  Poll   24 | 2026-06-26 17:19:21 | TAMPERED
+  Poll   25 | 2026-06-26 17:19:26 | TAMPERED
+  Poll   26 | 2026-06-26 17:19:32 | TAMPERED
+  Poll   27 | 2026-06-26 17:19:37 | TAMPERED
+  Poll   28 | 2026-06-26 17:19:43 | TAMPERED
+  Poll   29 | 2026-06-26 17:19:48 | TAMPERED
+  Poll   30 | 2026-06-26 17:19:54 | TAMPERED
+
+Monitor results written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\monitor_results_5.0s_1782474594.json
+  Original artifact restored.
+
+======================================================================
+STEP 5: DETECTION LATENCY CALCULATION
+======================================================================
+======================================================================
+DETECTION LATENCY REPORT
+======================================================================
+
+Polling interval: 5.0s
+Total polls: 30
+Status changes observed: 0
+
+Detection Latency: 0.0034s
+  Tamper time:       1782474436.3794248
+  Detection time:    2026-06-26 17:17:16
+  Detected at poll:  #1
+
+
+======================================================================
+STEP 6: COMBINED REPORT
+======================================================================
+Combined report written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\evaluation_report.json
+
+======================================================================
+EVALUATION COMPLETE
+======================================================================
+  Detection Rate:   100.0%
+  Detection Latency: 0.0034s
+  Results directory: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results
+======================================================================
