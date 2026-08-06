@@ -24,8 +24,8 @@ def verify(artifact_path, artifact_id):
         print(json.dumps({"detected": False, "error": "Cannot connect to Ethereum node"}))
         return
 
-    addr_file = PROJECT_ROOT / "contract_address.json"
-    abi_file = PROJECT_ROOT / "contract_abi.json"
+    addr_file = Path(r"C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\contract_address.json")
+    abi_file = Path(r"C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\contract_abi.json")
     if not addr_file.exists() or not abi_file.exists():
         print(json.dumps({"detected": False, "error": "Contract files not found"}))
         return

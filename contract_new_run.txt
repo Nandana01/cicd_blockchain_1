@@ -1,4 +1,0 @@
-python deploy_contract.py --artifact-path "note-app.tar" --artifact-id "notes-app-v1"
-
-
-ython "C:\Users\ushus\Downloads\practicum doc\Full_code\Full_code\evaluation\evaluation\run_evaluation.py"  --source "C:\Users\ushus\Downloads\practicum doc\Full_code\Full_code\note-app.tar" --artifact-id notes-app-v1  
