@@ -31,7 +31,8 @@ logger = logging.getLogger(__name__)
 def index():
     try:
         logger.info("Fetching notes from database")
-        
+        print("Note")
+        print("Notes")
         conn = sqlite3.connect(DATABASE)
 
         cursor = conn.cursor()
