@@ -1,0 +1,6 @@
+
+python "C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\run_evaluation.py"  --source "C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\note-app.tar" --artifact-id notes-app-v1  
+
+
+note: replace the path with yours from where the evaluation scripts run_evaluation
+      replace the path in _web3_helper.py of contract address and contract abi file with yours before running

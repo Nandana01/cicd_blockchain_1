@@ -1,4 +1,4 @@
-(base) D:\project_2026\MS\FAPE0510\Full_code\evaluation>python run_evaluation.py --source ../note-app.tar --artifact-id notes-app-v1
+(base) C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\run_evaluation.py --source ../note-app.tar --artifact-id notes-app-v1
 ======================================================================
 BLOCKCHAIN ARTIFACT INTEGRITY - EVALUATION SUITE
 ======================================================================
@@ -33,7 +33,7 @@ Creating 3 tampered variants per method...
   [replace_all_001] method=replace_all  hash=4b85511f79815188...  diff=True
   [replace_all_002] method=replace_all  hash=8da4df7d2f3fc60f...  diff=True
 
-Manifest written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\tampered_artifacts\tamper_manifest.json
+Manifest written: C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\results\tampered_artifacts\tamper_manifest.json
 Total tampered artifacts: 15
 
 ======================================================================
@@ -57,7 +57,7 @@ Running detection on 15 tampered artifacts...
   [14/15] tampered_replace_all_001.tar (method=replace_all) ... DETECTED (2/3 pathways)
   [15/15] tampered_replace_all_002.tar (method=replace_all) ... DETECTED (2/3 pathways)
 
-Detection results written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\detection_results_1782474435.json
+Detection results written: C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\results\detection_results_1782474435.json
 Detection rate: 100.0%
 
 ======================================================================
@@ -127,7 +127,7 @@ Starting monitor: artifact=../note-app.tar
   Poll   29 | 2026-06-26 17:19:48 | TAMPERED
   Poll   30 | 2026-06-26 17:19:54 | TAMPERED
 
-Monitor results written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\monitor_results_5.0s_1782474594.json
+Monitor results written: C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\results\monitor_results_5.0s_1782474594.json
   Original artifact restored.
 
 ======================================================================
@@ -150,12 +150,12 @@ Detection Latency: 0.0034s
 ======================================================================
 STEP 6: COMBINED REPORT
 ======================================================================
-Combined report written: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results\evaluation_report.json
+Combined report written: C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\results\evaluation_report.json
 
 ======================================================================
 EVALUATION COMPLETE
 ======================================================================
   Detection Rate:   100.0%
   Detection Latency: 0.0034s
-  Results directory: D:\project_2026\MS\FAPE0510\Full_code\evaluation\results
+  Results directory: C:\Users\ushus\OneDrive - National College of Ireland\Desktop\Full_code\evaluation\evaluation\results
 ======================================================================
